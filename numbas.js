@@ -66,7 +66,8 @@ Numba.prototype.add = function(incoming) {
 
     this.probableMin = this.min;
     this.probableMax = this.max;
-
+    this.diff = this.max - this.min;
+    this.diffP = this.probableMax - this.probableMin;
     return this;
 };
 
@@ -96,7 +97,8 @@ Numba.prototype.substract = function(incoming) {
 
     this.probableMin = this.min;
     this.probableMax = this.max;
-
+    this.diff = this.max - this.min;
+    this.diffP = this.probableMax - this.probableMin;
 
     return this;
 };
@@ -127,7 +129,9 @@ Numba.prototype.multiply = function(incoming) {
 
     this.probableMin = this.min;
     this.probableMax = this.max;
-
+    this.diff = this.max - this.min;
+    this.diffP = this.probableMax - this.probableMin;
+    
     return this;
 };
 
@@ -158,7 +162,9 @@ Numba.prototype.divide = function(incoming) {
 
     this.probableMin = this.min;
     this.probableMax = this.max;
-
+    this.diff = this.max - this.min;
+    this.diffP = this.probableMax - this.probableMin;
+    
     return this;
 };
 
