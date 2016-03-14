@@ -23,7 +23,7 @@ console.log(myNumba1.add(1).toString());
 // [-3..19]
 
 console.log(myNumba1.diff); 
-// 5
+// 22
 
 myNumba2.min = Number.NEGATIVE_INFINITY;
 myNumba2.max = Number.POSITIVE_INFINITY;
