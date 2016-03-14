@@ -12,6 +12,9 @@ function Numba (first, end) {
     this.probableMin = this.min;
     this.probableMax = this.max;
 
+    this.diff = this.max - this.min;
+    this.diffP = this.probableMax - this.probableMin;
+
 }
 
 Numba.prototype.toString = function() {
@@ -34,6 +37,8 @@ Numba.prototype.probable = function() {
     return new Numba(this.probableMin, this.probableMax );
 
 };
+
+
 
 Numba.prototype.add = function(incoming) {
 
@@ -92,7 +97,6 @@ Numba.prototype.substract = function(incoming) {
     this.probableMin = this.min;
     this.probableMax = this.max;
 
-    this.diff = this.max - this.min;
 
     return this;
 };
