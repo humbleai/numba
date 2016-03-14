@@ -28,30 +28,39 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a id="numba" class="anchor" href="#numba" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>numba</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+<p>Numbas are kind of ranges. Here is an example:</p>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<div class="highlight highlight-source-js"><pre>
+<span class="pl-k">var</span> myNumba1 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Numba</span>(<span class="pl-c1">1</span>, <span class="pl-c1">6</span>); <span class="pl-c">// [-1..6]</span>
+<span class="pl-k">var</span> myNumba2 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Numba</span>(<span class="pl-k">-</span><span class="pl-c1">4</span>, <span class="pl-c1">3</span>); <span class="pl-c">// [-4..3]</span>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">Numbas</span>.<span class="pl-c1">add</span>(myNumba1, myNumba2).<span class="pl-c1">toString</span>()); 
+<span class="pl-c">// [-3..9]</span>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">myNumba1</span>.<span class="pl-en">multiply</span>(myNumba2).<span class="pl-c1">toString</span>()); 
+<span class="pl-c">// [-4..18]</span>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<span class="pl-k">if</span> (<span class="pl-smi">Numbas</span>.<span class="pl-en">gte</span>(myNumba1, myNumba2)) <span class="pl-en">console</span>.<span class="pl-c1">log</span>(myNumba1 <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span> is greater than or equal to <span class="pl-pds">'</span></span> <span class="pl-k">+</span> myNumba2); 
+<span class="pl-c">// [-4..18] is greater than or equal to [-4..3]</span>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<span class="pl-k">if</span> (<span class="pl-smi">Numbas</span>.<span class="pl-en">in</span>(myNumba2, myNumba1)) <span class="pl-en">console</span>.<span class="pl-c1">log</span>(myNumba2 <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span> is in <span class="pl-pds">'</span></span> <span class="pl-k">+</span> myNumba1); 
+<span class="pl-c">// [-4..3] is in [-4..18]</span>
 
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">myNumba1</span>.<span class="pl-c1">add</span>(<span class="pl-c1">1</span>).<span class="pl-c1">toString</span>()); 
+<span class="pl-c">// [-3..19]</span>
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">myNumba1</span>.<span class="pl-smi">diff</span>); 
+<span class="pl-c">// 22</span>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<span class="pl-smi">myNumba2</span>.<span class="pl-smi">min</span> <span class="pl-k">=</span> <span class="pl-c1">Number</span>.<span class="pl-c1">NEGATIVE_INFINITY</span>;
+<span class="pl-smi">myNumba2</span>.<span class="pl-smi">max</span> <span class="pl-k">=</span> <span class="pl-c1">Number</span>.<span class="pl-c1">POSITIVE_INFINITY</span>;
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">myNumba2</span>.<span class="pl-c1">toString</span>()); 
+<span class="pl-c">// [-Infinity..Infinity]</span>
+</pre></div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/humbleai">humbleai</a></p>
