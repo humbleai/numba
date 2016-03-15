@@ -1,10 +1,10 @@
 # numba
 
-Numbas are kind of ranges. Here is an example:
+Numbas are kinda ranges. Here is an example:
 
 ```javascript
 
-var myNumba1 = new Numba(1, 6); // [-1..6]
+var myNumba1 = new Numba(1, 6); // [1..6]
 var myNumba2 = new Numba(-4, 3); // [-4..3]
 
 console.log(Numbas.add(myNumba1, myNumba2).toString()); 
