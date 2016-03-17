@@ -22,7 +22,7 @@ if (Numbas.in(myNumba2, myNumba1)) console.log(myNumba2 + ' is in ' + myNumba1);
 console.log(myNumba1.add(1).toString()); 
 // [-3..19]
 
-console.log(myNumba1.diff); 
+console.log(myNumba1.diff()); 
 // 22
 
 myNumba2.min = Number.NEGATIVE_INFINITY;
