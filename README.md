@@ -1,6 +1,8 @@
 # numba
 
-Numbas are kinda ranges. Here is an example:
+Numbas are kinda ranges. Similar to interval arithmetics. https://en.wikipedia.org/wiki/Interval_arithmetic
+
+Here is an example:
 
 ```javascript
 
